@@ -1,0 +1,105 @@
+# Gender Detection and Face Recognition System
+
+## Overview
+
+This project is a real-time Gender Detection and Face Recognition System using Python, OpenCV, CNN, and LBPH Face Recognizer. The system captures faces through a webcam, recognizes the person's name, predicts gender, and displays confidence in real time.
+
+## Features
+
+* Real-time webcam face detection
+* Face recognition using LBPH Face Recognizer
+* Gender detection using CNN
+* Confidence score display
+* Automatic dataset creation using webcam
+* Easy addition of new users
+
+## Technologies Used
+
+* Python
+* OpenCV
+* OpenCV Contrib
+* TensorFlow / Keras
+* NumPy
+* Scikit-learn
+
+## Project Structure
+
+```text
+Gender_Detection_Project
+│
+├── dataset
+│   ├── male
+│   └── female
+│
+├── models
+│   ├── face_recognizer.yml
+│   ├── gender_model.h5
+│   └── name_mapping.pkl
+│
+├── capture_faces.py
+├── train_gender.py
+├── train_faces.py
+├── recognize_face_gender.py
+└── requirements.txt
+```
+
+## How to Add a New Person
+
+### Step 1: Capture Images
+
+Run:
+
+```bash
+python capture_faces.py
+```
+
+Enter:
+
+```text
+Name: anjali
+Gender: female
+```
+
+The system automatically captures and stores face images.
+
+### Step 2: Retrain Gender Model
+
+Run:
+
+```bash
+python train_gender.py
+```
+
+This updates the gender classification model.
+
+### Step 3: Retrain Face Recognition Model
+
+Run:
+
+```bash
+python train_faces.py
+```
+
+This updates the face recognition model with the new person's images.
+
+### Step 4: Start Recognition
+
+Run:
+
+```bash
+python recognize_face_gender.py
+```
+
+## Output Example
+
+```text
+Name: souji
+Gender: Female
+Confidence: 94.5%
+```
+
+## Notes
+
+* For better accuracy, capture at least 50–100 images per person.
+* Use different face angles and lighting conditions during image capture.
+* After adding a new person, always retrain both models before running recognition.
