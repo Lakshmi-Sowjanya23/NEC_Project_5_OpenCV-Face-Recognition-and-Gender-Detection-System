@@ -103,3 +103,27 @@ Confidence: 94.5%
 * For better accuracy, capture at least 50–100 images per person.
 * Use different face angles and lighting conditions during image capture.
 * After adding a new person, always retrain both models before running recognition.
+
+Dataset Information
+
+The dataset is not included in this repository due to file size limitations.
+
+To create a dataset:
+
+1. Run:
+   python capture_faces.py
+
+2. Enter the person's name and gender.
+
+3. The system automatically captures face images and stores them in:
+   dataset/male
+   dataset/female
+
+4. After adding new data, retrain the models:
+
+   python train_gender.py
+   python train_faces.py
+
+5. Start live recognition:
+
+   python recognize_face_gender.py
