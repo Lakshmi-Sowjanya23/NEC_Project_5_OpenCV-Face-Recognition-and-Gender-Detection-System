@@ -1,4 +1,18 @@
-# Gender Detection and Face Recognition System
+# OpenCV Gender Detection and Face Recognition System
+
+## Output
+
+### Output Male
+
+<p align="center">
+  <img src="output_male.png" width="800">
+</p>
+
+### Output Female
+
+<p align="center">
+  <img src="output_female.png" width="800">
+</p>
 
 ## Overview
 
@@ -104,26 +118,36 @@ Confidence: 94.5%
 * Use different face angles and lighting conditions during image capture.
 * After adding a new person, always retrain both models before running recognition.
 
-Dataset Information
+## Dataset Information
 
 The dataset is not included in this repository due to file size limitations.
 
 To create a dataset:
 
 1. Run:
+
+   ```text
    python capture_faces.py
+   ```
 
 2. Enter the person's name and gender.
 
 3. The system automatically captures face images and stores them in:
+
+   ```text
    dataset/male
    dataset/female
+   ```
 
 4. After adding new data, retrain the models:
 
+   ```text
    python train_gender.py
    python train_faces.py
+   ```
 
 5. Start live recognition:
 
+   ```text
    python recognize_face_gender.py
+   ```
